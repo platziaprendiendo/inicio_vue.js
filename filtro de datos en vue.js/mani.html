@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>View</title>
+</head>
+<body>
+    <!-- el id que le colocamos es donde meteremos todo el html -->
+    <div id="app">
+        <!-- lo que realizamos ahora es colocar un filtro UPPERCASE -->
+       <h1>{{titulo | uppercase }}</h1>
+       <!-- colocamos un filtro  LOWERCASE -->
+       <h2>{{subtitulo | lowercase}}</h2>
+       <!-- al interesante es que podemos aplicar mas de un filtro a las etiquetas -->
+       <h3>
+          {{texto |lowercase |uppercase}} 
+       </h3>
+    </div>
+    <!-- Incluimos la libreria de vue.js -->
+    <script src="https://unpkg.com/vue"></script>
+    <!-- incluismo el js que utilizaremos -->
+    <script src="js/main.js"></script>
+</body>
+</html>
