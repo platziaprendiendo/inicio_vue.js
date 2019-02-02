@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>View</title>
+</head>
+<body>
+    <!-- el id que le colocamos es donde meteremos todo el html -->
+    <div id="app">
+        <!-- nombre es una variable -->
+        hello {{nombre}}
+        <li>
+            <!-- tambien podemos obiar el v-bind: por solo ":" -->
+            <a v-bind:href="url" target="_blank">{{pagina}}</a>
+        </li>
+    </div>
+    <!-- Incluimos la libreria de vue.js -->
+    <script src="https://unpkg.com/vue"></script>
+    <!-- incluismo el js que utilizaremos -->
+    <script src="js/main.js"></script>
+</body>
+</html>
