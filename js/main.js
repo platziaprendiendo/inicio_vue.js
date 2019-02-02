@@ -9,7 +9,8 @@ let app=new Vue({
     data:{
         nombre:"Alvaro",
         url:"www.yarqay.com",
-        pagina:"Soy un boton sexi"
+        pagina:"Soy un boton sexi",
+        mostrar:true
     }    
 })
 

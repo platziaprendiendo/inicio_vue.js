@@ -13,8 +13,32 @@
         hello {{nombre}}
         <li>
             <!-- tambien podemos obiar el v-bind: por solo ":" -->
-            <a v-bind:href="url" target="_blank">{{pagina}}</a>
+            <!-- si v-if es tur el link se muestra pero si no entonces no se muestra -->
+            <a v-if="mostrar" v-bind:href="url" target="_blank">{{pagina}}</a>
         </li>
+        <!-- podemos agrupar elemtnos es un englobador de objetos  de vue pero no se puede utilizar v-show en este -->
+        <template v-if="mostrar">
+            <a href="·">SOY UN BOTONS</a>
+            <a href="#">SOY OTRO BOTON SEXI</a>
+        </template>
+        <h1>UTILIZANDO</h1>
+        <hr>
+        <p>
+            la diferencia entre v-show y en v-if es que  v-show hace el uso de display none y lo oculta en el html
+            pero el v-if lo que hace es borrarlo del DOM
+            algo interesante es que v-show no puede utilizarse en el templante
+            algo interesante es que v-if es mucho trabajo del navegador
+            <br>
+            UN DATO INTERESANTE DE CUANDO USAR UNOD DE LOS DOS, que si queremos que se ejecute al momento de iniciar la paguian utilizamos el v-if pero si lo utilizamos despues de iniciar 
+            la pagina en el procedimiento, utilizamo el v-show
+
+        </p>
+        <div v-show="mostrar">
+            <p>ESTE TEXTO SEXI SE MOSTRARA SOLO SI MOSTRAR ES TRUE</p>
+        </div>
+        <div v-show="!mostrar">
+            <p>ESTE TEXTO SEXI SOLO SE MOSTRARA SOLO SI MOSTRAR ES FALSE</p>
+        </div>
     </div>
     <!-- Incluimos la libreria de vue.js -->
     <script src="https://unpkg.com/vue"></script>
