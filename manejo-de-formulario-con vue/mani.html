@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>View</title>
+</head>
+<body>
+    <!-- el id que le colocamos es donde meteremos todo el html -->
+    <div id="app">
+        <input type="text" name="nombre" placeholder="Ingrese su nombre" v-model="nombre">
+        <p>Tu nombre en mayuscula es:  {{nombre | mayuscula}}</p>
+    </div>
+    <!-- lo que hacemos es que cuando hagas submit lo que hace es ejecutar el submit con el metodo submit -->
+    <form v-on:submit.prevent="agregarArticulo">
+        <h2>Cual es tu curso favorito</h2>
+        <input v-model="codigo" type="checkbox" id="vue" value="vue">
+        <label  for="vue">Curso de Vue.js</label>
+        <input v-model="codigo" type="checkbox" id="ceo" value="vue">
+        <label for="ceo">Curso de Vue.js</label>
+        <input v-model="codigo" type="checkbox" id="reack" value="vue">
+        <label for="reack">Curso de Vue.js</label>
+        <br>
+        <button type="submit">Enviar</button>
+        <input type="submit" value="Agregar"></p>
+    </form>
+    <!-- Incluimos la libreria de vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- incluismo el js que utilizaremos -->
+    <script src="js/main.js"></script>
+</body>
+</html>
